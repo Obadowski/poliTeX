@@ -1,8 +1,9 @@
 poliTeX
 =======
 
-**Infelizmente, eu não tenho mais tempo para manter esse repositório.  
-A classe poliTeX continua funcionando para escrever sua monografia/dissertacão/tese, mas eu não posso mais atender a pedidos de funcionalidades, responder a dúvidas ou resolver bugs. Boa sorte a todos!**
+**Fiz este fork para dar continuidade ao projeto de forma independente. Fico aberto a sugestões e comentários.
+
+Naturalmente, este projeto tem um cunho inicial para meus objetivos acadêmicos, entretanto acredito que outros possam se beneficiar da continuação a este trabalho. Agradeço a disponibilização deste material de forma pública!
 
 ---
 
