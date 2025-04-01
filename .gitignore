@@ -1,0 +1,39 @@
+# Arquivos de saída LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.brf
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.ilg
+*.ind
+*.idx
+*.glo
+*.gls
+*.glg
+*.acn
+*.acr
+*.alg
+*.dvi
+*.ps
+*.pdf
+
+# Arquivos temporários do sistema
+*~
+*.swp
+*.bak
+*.tmp
+
+# Diretórios comuns de build
+_build/
+
