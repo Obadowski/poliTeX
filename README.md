@@ -1,7 +1,7 @@
 poliTeX
 =======
 
-**Fiz este fork para dar continuidade ao projeto de forma independente. Fico aberto a sugestões e comentários.
+> Fiz este fork para dar continuidade ao projeto de forma independente. Fico aberto a sugestões e comentários.
 
 Naturalmente, este projeto tem um cunho inicial para meus objetivos acadêmicos, entretanto acredito que outros possam se beneficiar da continuação a este trabalho. Agradeço a disponibilização deste material de forma pública!
 
