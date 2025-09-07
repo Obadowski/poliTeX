@@ -201,11 +201,7 @@
 %%  Defining "POLIheader" pagestyle
 \fancypagestyle{POLIheader}{%
 	\fancyhf{} % clear all header and footer fields
-	\if@twoside%
-		\fancyhead[RO,LE]{\small\thepage}
-	\else%
-		\fancyhead[RO]{\small\thepage}
-	\fi%
+	\fancyhead[RO,LE]{\small\thepage}
 	\renewcommand{\headrulewidth}{0pt}
 	\renewcommand{\footrulewidth}{0pt}
 }
@@ -252,6 +248,8 @@
 \ifthenelse{\equal{\ABNTpnum}{ABNT}}{
 	% ABNT strict
 	% Page style is empty until TOC
+	\renewcommand{\thepage}{}
+	
 	\renewcommand{\ABNTBeginOfTextualPart}{
 		\renewcommand{\thepage}{\arabic{page}}
 		\pagestyle{POLIheader}
@@ -1047,8 +1045,7 @@
     \begin{minipage}{.49\textwidth}
       \begin{espacoumemeio}
         \begin{sloppypar}
-            {\comentarioformat\ABNTcomentariodata}
-            \vspace{0.3cm}
+            {\comentarioformat\ABNTcomentariodata}\\[0.3cm]
         \end{sloppypar}
 
       \end{espacoumemeio}
@@ -1076,13 +1073,12 @@
     {\tituloformat \ABNTuppercasetitulodata}
 
     % comentário
-    \vspace{2cm}
+    \vspace{1cm}
     \hspace{.5\textwidth} % posicionando a minipage 
     \begin{minipage}{.49\textwidth}
       \begin{espacoumemeio}
         \begin{sloppypar}
-            {\comentarioformat\ABNTcomentariodata}
-            \vspace{0.3cm}
+            {\comentarioformat\ABNTcomentariodata}\\[0.3cm]
         \end{sloppypar}
 
         \ABNTifnotempty{\ABNTareaconcdata}%
@@ -1175,6 +1171,15 @@
   \coorientador[~]{}%
 }
 
+%% Projeto de Pesquisa
+\newcommand{\projetoPesquisa}[1]{%
+  \renewcommand{\PoliTipoDocData}{Projeto de Pesquisa}
+  \comentario{%
+    Projeto de pesquisa apresentado
+    à Escola Politécnica como requisito
+    para ingresso no programa de 
+    Doutorado em #1.}%
+}
 
 %%%%%%  DEDICATION  %%%%%%
 
@@ -1205,7 +1210,7 @@
   {\end{espacosimples}\newpage}
 
 
-%%%%%%  EPIGRAPH  %%%%%%
+%%%%%%  ACKNOWLEDGEMENTS  %%%%%%
 
 \newcommand{\epigrafe}[1]
 {%
@@ -1235,7 +1240,7 @@
    \ifthenelse{\boolean{ABNThypertoc}}{\renewcommand{\chaptertype}{}}{}%
    \begin{espacosimples}%
   }%
-  {\end{espacosimples}\newpage}
+  {\end{espacosimples}\newpage}%abstract
 
 
 %%%%%%  RESUMO  %%%%%%
@@ -1250,7 +1255,7 @@
    \ifthenelse{\boolean{ABNThypertoc}}{\renewcommand{\chaptertype}{}}{}%
    \begin{espacosimples}%
   }%
-  {\end{espacosimples}\newpage}
+  {\end{espacosimples}\newpage}%abstract
 
 
 %%%%%%  SIGNATURE SHEET  %%%%%%
@@ -1308,16 +1313,6 @@
  }%
  {}
 
-
-%%%%%%  ARBITRARY PRE TEXTUAL SECTION  %%%%%%
-
-\newenvironment{pretextualsection}[1]%
-  {%
-   \if@openright\cleardoublepage\else\clearpage\fi%
-   \pretextualchapter{#1}%
-   \begin{espacosimples}%
-  }%
-  {\end{espacosimples}\newpage}
 
 
 %%%%%%  POST SECTION INDENTATION  %%%%%%
